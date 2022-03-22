@@ -1,5 +1,6 @@
 /// MAKE SURE TO CHANGE THIS SETTING FIRST:
 /// OPTIONS > CONVERSIONS > SCALE WHEN CONVERTING > FALSE
+setBatchMode(true)
 
 // Open image
 run("Close All");
@@ -8,6 +9,7 @@ dir = File.getParent(path);
 name = File.getName(path);
 run("Bio-Formats", "open=["+path+"] autoscale color_mode=Default rois_import=[ROI manager] view=Hyperstack stack_order=XYCZT series_1");
 rename("sted");
+run("32-bit");
 run("Properties...", "unit=um pixel_width=0.03 pixel_height=0.03 voxel_depth=0 global");
 
 // Correction for bleaching
@@ -184,3 +186,5 @@ Table.setColumn("NumPuncta", glob_puncta_rsfp, GlobTable);
 
 saveAs("Results", dir+"/GlobalResult.txt");
 close("GlobalResult.txt")
+
+setBatchMode(false)
