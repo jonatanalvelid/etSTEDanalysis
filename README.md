@@ -1,5 +1,5 @@
 # etSTEDanalysis
-Analysis code for event-triggered STED data, including brief example data. Supporting the method implementation and findings in the manuscript "Event-triggered STED", Jonatan Alvelid, Martina Damenti, Ilaria Testa (manuscript, submitted, 2021).
+Analysis code for event-triggered STED data, including brief example data. Supporting the method implementation and findings in the manuscript "Event-triggered STED", Jonatan Alvelid, Martina Damenti, Chiara Sgattoni, Ilaria Testa (manuscript, submitted, 2021).
 
 Jupyter notebooks and ImageJ scripts.
 
